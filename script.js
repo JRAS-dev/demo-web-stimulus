@@ -18,10 +18,10 @@ function countdown(idname){
     var i = 0;
     setInterval(function(){
         var counter = 3 - i;
-        obj.textContent = counter;
         if (counter < 0) {
             location.href = "./stimulus.html";
         }
+        obj.textContent = counter;
         i++;
     }, 1000);
 }
