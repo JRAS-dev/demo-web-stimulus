@@ -19,6 +19,7 @@ function countdown(idname){
     setInterval(function(){
         var counter = 3 - i;
         if (counter < 0) {
+            obj.textContent = "";
             location.href = "./stimulus.html";
         }
         obj.textContent = counter;
