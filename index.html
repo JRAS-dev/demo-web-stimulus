@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <script type="text/javascript">
+        function input(){
+            var id = input_form.id.value;
+            var name = input_form.name.value;
+            alert("ID : " + id + ", Name : " + name);
+        }
+    </script>
+</head>
+
+<body>
+    <form name="input_form" action="index.html">
+        <p>ID : <br><input type="text" name="id"></p>
+        <p>Name : <br><input type="text" name="name"></p>
+        <p><input type="submit" value="OK" onclick="input()"></p>
+    </form>
+</body>
+</html>
