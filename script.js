@@ -58,21 +58,16 @@ function runStimulus(idname, btn0, btn1, btn2) {
     var obj = document.getElementById(idname);
     obj.style.backgroundColor = "#000000";
 
-    let text_color = getColor();
-    obj.style.color = text_color;
+    let text_color = getColorSet();
+
+    // テキストの色を決める
+    obj.style.color = text_color[0][1];
     obj.style.fontSize = 1000 + "%";
     obj.style.textAlign = "center";
     obj.style.verticalAlign = "middle";
-    let text_meaning_color = getColor();
-    if (text_meaning_color == "#ff0000") {
-        obj.textContent = "赤";
-    } else if (text_meaning_color == "#00ff00") {
-        obj.textContent = "緑";
-    } else if (text_meaning_color == "#0000ff") {
-        obj.textContent = "青";
-    } else {
-        obj.textContent = "Error"
-    }
+
+    // テキストを決める
+    obj.textContent = text_color[1][0];
 
     // ボタンの色を決める
     let btn_color = getColorSet();
