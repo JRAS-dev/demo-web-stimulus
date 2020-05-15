@@ -6,12 +6,12 @@
     <script type="text/javascript" src="./script.js"></script>
 </head>
 
-<body bgcolor="0x000000" onload="runStimulus('stimulus_form')">
+<body bgcolor="0x000000" onload="runStimulus('stimulus_form', 'button0', 'button1', 'button2')">
     <p id="stimulus_form"></p>
     <div style="text-align: center;">
-        <input type="button" style="background-color: red; border-style: none; width: 20%; padding: 5%;" onclick="runStimulus('stimulus_form')" />
-        <input type="button" style="background-color: green; border-style: none; width: 20%; padding: 5%;" onclick="runStimulus('stimulus_form')" />
-        <input type="button" style="background-color: blue; border-style: none; width: 20%; padding: 5%;" onclick="runStimulus('stimulus_form')" />
+        <input id="button0" type="button" style="background-color: red; border-style: none; width: 20%; padding: 5%;" onclick="runStimulus('stimulus_form', 'button0', 'button1', 'button2')" />
+        <input id="button1" type="button" style="background-color: green; border-style: none; width: 20%; padding: 5%;" onclick="runStimulus('stimulus_form', 'button0', 'button1', 'button2')" />
+        <input id="button2" type="button" style="background-color: blue; border-style: none; width: 20%; padding: 5%;" onclick="runStimulus('stimulus_form', 'button0', 'button1', 'button2')" />
     </div>
 </body>
 </html>

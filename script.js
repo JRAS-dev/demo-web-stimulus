@@ -42,7 +42,19 @@ function getColor() {
     }
 }
 
-function runStimulus(idname) {
+function getColorSet() {
+    var array = [["赤", "#ff0000"], ["緑", "#00ff00"], ["青", "#0000ff"]];
+    // Fisher–Yates shuffle
+    for(var i = array.length - 1; i > 0; i--){
+        var r = Math.floor(Math.random() * (i + 1));
+        var tmp = array[i];
+        array[i] = array[r];
+        array[r] = tmp;
+    }
+    return array;
+}
+
+function runStimulus(idname, btn0, btn1, btn2) {
     var obj = document.getElementById(idname);
     obj.style.backgroundColor = "#000000";
 
@@ -61,4 +73,10 @@ function runStimulus(idname) {
     } else {
         obj.textContent = "Error"
     }
+
+    // ボタンの色を決める
+    let btn_color = getColorSet();
+    document.getElementById(btn0).style.background = btn_color[0][1];
+    document.getElementById(btn1).style.background = btn_color[1][1];
+    document.getElementById(btn2).style.background = btn_color[2][1];
 }
